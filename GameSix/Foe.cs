@@ -11,10 +11,9 @@ namespace GameSix
 
 		public Foe (string name)
 		{
-			this.name = name;
+			SetName(name);
 			health = 100;
 			shield = 0;
-
 		}
 
 		public string GetName()
@@ -22,19 +21,32 @@ namespace GameSix
 			return name;
         }
 
-		public string GetHealth()
+		public float GetHealth()
 		{
 			return health;
 		}
 
-		public string GetShield()
+		public float GetShield()
 		{
 			return shield;
 		}
 
+		public void SetName(string name)
+		{
+			string aux = "";
+			char toremove = ' ';
+			for (int x = 0; x < name.Length; x++)
+            {
+				if (name[x] == toremove)
+					continue;
+				else
+					aux += name[x];
+            }
+		}
+
 		public void TakeDamage(float damage)
         {
-			if(shield < 0)
+			if (shield < 0)
             {
 				float damageStillToInflict = -shield;
 				shield = 0;
