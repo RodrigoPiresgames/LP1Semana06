@@ -46,6 +46,8 @@ namespace GameSix
 
 		public void TakeDamage(float damage)
         {
+			shield -= damage;
+
 			if (shield < 0)
             {
 				float damageStillToInflict = -shield;

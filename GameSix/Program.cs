@@ -12,19 +12,21 @@ namespace GameSix
             int numFoes = Convert.ToInt16(aux);
 
             Foe[] foes;
+
             for (int x = 0; x < numFoes; x++)
             {
                 Console.WriteLine("How will this one be called");
                 Console.WriteLine(" ");
                 aux = Console.ReadLine();
 
-                Foe enemy = new Foe(aux);
-
-                foes.Append(enemy);
+                foes[x] = new Foe(aux);
             }
 
             foreach (Foe baddie in foes)
-                baddie.GetHealth;
+            {
+                Console.WriteLine($"{baddie.GetName()}");
+                Console.WriteLine($"{baddie.GetName()}");
+            }
         }
     }
 }
