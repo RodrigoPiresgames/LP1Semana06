@@ -25,8 +25,14 @@ namespace GameSix
             foreach (Foe baddie in foes)
             {
                 Console.WriteLine($"Name: {baddie.GetName()}");
-                Console.WriteLine($"Health: {baddie.GetName()}");
+                Console.WriteLine($"Health: {baddie.GetHealth()}");
             }
+
+            foes[1].PickUpPowerUp(PowerUp.Shield, 50);
+            foes[2].TakeDamage(50);
+
+            Console.WriteLine($"{foes[1].GetShield()}");
+            Console.WriteLine($"{foes[2].GetHealth()}");
         }
     }
 }
