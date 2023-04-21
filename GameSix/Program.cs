@@ -33,6 +33,8 @@ namespace GameSix
 
             Console.WriteLine($"{foes[1].GetShield()}");
             Console.WriteLine($"{foes[2].GetHealth()}");
+
+            Console.WriteLine($"{Foe.GetNumOfPowerUps()}");
         }
     }
 }

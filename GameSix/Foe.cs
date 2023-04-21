@@ -8,6 +8,7 @@ namespace GameSix
 		private string name;
 		private float health;
 		private float shield;
+		private static float numOfPowerUps;
 
 		public Foe (string name)
 		{
@@ -15,6 +16,11 @@ namespace GameSix
 			health = 100;
 			shield = 0;
 		}
+
+		static Foe ()
+        {
+			numOfPowerUps = 0;
+        }
 
 		public string GetName()
         {
@@ -29,6 +35,11 @@ namespace GameSix
 		public float GetShield()
 		{
 			return shield;
+		}
+
+		public static float GetNumOfPowerUps()
+		{
+			return numOfPowerUps;
 		}
 
 		public void SetName(string name)
@@ -61,6 +72,8 @@ namespace GameSix
 
 		public void PickUpPowerUp(PowerUp pUType, float value)
         {
+
+			numOfPowerUps++;
 			if (pUType == PowerUp.Health)
 			{
 				this.health += value;
