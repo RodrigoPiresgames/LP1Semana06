@@ -9,9 +9,9 @@ namespace GameSix
             Console.WriteLine("How many foes would u like?");
             Console.WriteLine(" ");
             string aux = Console.ReadLine();
-            int numFoes = Convert.ToInt16(aux);
+            int numFoes = Convert.ToInt32(aux);
 
-            Foe[] foes;
+            Foe[] foes = new Foe [numFoes];
 
             for (int x = 0; x < numFoes; x++)
             {
@@ -24,8 +24,8 @@ namespace GameSix
 
             foreach (Foe baddie in foes)
             {
-                Console.WriteLine($"{baddie.GetName()}");
-                Console.WriteLine($"{baddie.GetName()}");
+                Console.WriteLine($"Name: {baddie.GetName()}");
+                Console.WriteLine($"Health: {baddie.GetName()}");
             }
         }
     }

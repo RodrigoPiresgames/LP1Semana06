@@ -42,6 +42,8 @@ namespace GameSix
 				else
 					aux += name[x];
             }
+
+			this.name = aux;
 		}
 
 		public void TakeDamage(float damage)
