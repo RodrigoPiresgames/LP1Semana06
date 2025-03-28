@@ -43,7 +43,7 @@ namespace MyRPG
         {
             for(int x = 0; x < GetNumEnemies(); x++)
             {
-                if (rooms[x] != null )
+                if (rooms[x]  != null)
                 Console.WriteLine($"Room {x.ToRoman()}: {rooms[x].GetName()}");
             }
         }
