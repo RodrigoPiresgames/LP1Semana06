@@ -14,5 +14,10 @@ namespace MyRPG
             health = 100;
             shield = 0;
         }
+
+        public string GetName()
+        {
+            return name;
+        }
     }
 }

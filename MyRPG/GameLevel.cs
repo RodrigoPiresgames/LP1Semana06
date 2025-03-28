@@ -1,4 +1,6 @@
 using System;
+using System.Security.Cryptography.X509Certificates;
+using Humanizer;
 
 namespace MyRPG
 {
@@ -39,7 +41,11 @@ namespace MyRPG
 
         public void PrintEnemies()
         {
-
+            for(int x = 0; x < GetNumEnemies(); x++)
+            {
+                if (rooms[x] != null )
+                Console.WriteLine($"Room {x.ToRoman()}: {rooms[x].GetName()}");
+            }
         }
     }
 }
