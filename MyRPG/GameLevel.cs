@@ -4,12 +4,12 @@ namespace MyRPG
 {
     public class GameLevel
     {
-        private int roomNum;
+        private Enemy[] rooms;
         private string level;
 
         public GameLevel(int roomNum, string level)
         {
-            this.roomNum = roomNum;
+            rooms = new Enemy[roomNum];
             this.level = level;
 
         }
@@ -21,7 +21,20 @@ namespace MyRPG
 
         public int GetroomNum()
         {
-            return roomNum;
+            return rooms.Length;
         }
+
+        public int GetEnemyNum()
+        {
+            int enemyNum = 0;
+            foreach(Enemy foe in rooms)
+                enemyNum += 1;
+            return enemyNum;
+        }
+
+        public void SetEnemyInRoom(int room, Enemy enemy)
+        {
+
+        } 
     }
 }
