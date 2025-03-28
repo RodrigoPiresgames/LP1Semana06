@@ -11,7 +11,17 @@ namespace MyRPG
         {
             this.roomNum = roomNum;
             this.level = level;
-            
+
+        }
+
+        public string GetLevel()
+        {
+            return level;
+        }
+
+        public int GetroomNum()
+        {
+            return roomNum;
         }
     }
 }
