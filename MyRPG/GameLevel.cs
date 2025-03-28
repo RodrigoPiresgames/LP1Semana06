@@ -5,26 +5,26 @@ namespace MyRPG
     public class GameLevel
     {
         private Enemy[] rooms;
-        private string level;
+        private Hardness level;
 
-        public GameLevel(int roomNum, string level)
+        public GameLevel(int roomNum, Hardness level)
         {
             rooms = new Enemy[roomNum];
             this.level = level;
 
         }
 
-        public string GetLevel()
+        public Hardness GetHardness()
         {
             return level;
         }
 
-        public int GetroomNum()
+        public int GetNumRooms()
         {
             return rooms.Length;
         }
 
-        public int GetEnemyNum()
+        public int GetNumEnemies()
         {
             int enemyNum = 0;
             foreach(Enemy foe in rooms)
@@ -34,7 +34,12 @@ namespace MyRPG
 
         public void SetEnemyInRoom(int room, Enemy enemy)
         {
+            rooms[room] = enemy;
+        }
 
-        } 
+        public void PrintEnemies()
+        {
+
+        }
     }
 }

@@ -1,6 +1,6 @@
-enum Hardness
+public enum Hardness
 {
     Easy,
-    Medium,
+    Normal,
     Hard
 }
